@@ -29,7 +29,7 @@ Hardware Needed (per bracelet):
     ADXL343 accelerometer
     Hall Effect Sensor
     Adafruit LED Sequins (atleast 5)
-    I2S Mems Microphone
+    GPIO Expander
     2032 coin cell battery holder
     2x 2032 coin cell batteries
     Small Magnet
@@ -102,6 +102,7 @@ def wheel(pos):
         pos -= 170
         return [0, int(pos*3), int(255 - pos*3)]
 
+
 # Startup Sequence ####################################################
 # Runs once after toggling the power switch
 # Buzz the buzzer twice
@@ -129,6 +130,7 @@ for i in range(255):
 
 # Turn off the Sequins
 sequins.value = False
+
 
 # Main Loop ##########################################################
 while True:
